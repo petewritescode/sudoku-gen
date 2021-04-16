@@ -10,11 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/petewritescode/sudokudos.git"
   },
-  "keywords": ["sudoku", "generator", "typescript"],
+  "keywords": [
+    "sudoku",
+    "generator",
+    "typescript"
+  ],
   "author": "Pete Williams <hello@petewritescode.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/petewritescode/sudokudos/issues"
   },
-  "homepage": "https://github.com/petewritescode/sudokudos#readme"
+  "homepage": "https://github.com/petewritescode/sudokudos#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
 }
