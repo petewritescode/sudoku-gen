@@ -1,1 +1,3 @@
 # sudokudos
+
+Sudoku puzzle generator
