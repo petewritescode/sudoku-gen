@@ -1,6 +1,8 @@
 import { Difficulty } from '../types/difficulty.type';
 import { SEEDS } from './seeds.constant';
 
+const lineContainer = Array.from<string[]>({ length: 9 }).fill([]);
+
 const getDifficulties = () => {
   const difficulties: Record<Difficulty, undefined> = {
     easy: undefined,
@@ -12,29 +14,23 @@ const getDifficulties = () => {
   return Object.keys(difficulties);
 };
 
-const getTokens = (board: string): string[] => board.split('');
+const getTokens = (board: string) => board.split('');
 
-const getRows = (board: string): string[][] =>
-  getTokens(board).reduce(
-    (acc, token, tokenIndex) => {
-      const tokenRowIndex = Math.floor(tokenIndex / 9);
+const getRows = (board: string) =>
+  getTokens(board).reduce((acc, token, tokenIndex) => {
+    const tokenRowIndex = Math.floor(tokenIndex / 9);
 
-      return acc.map((row, rowIndex) => (rowIndex === tokenRowIndex ? [...row, token] : row));
-    },
-    Array.from<string[]>({ length: 9 }).fill([]),
-  );
+    return acc.map((row, rowIndex) => (rowIndex === tokenRowIndex ? [...row, token] : row));
+  }, lineContainer);
 
-const getColumns = (board: string): string[][] =>
-  getTokens(board).reduce(
-    (acc, token, tokenIndex) => {
-      const tokenColumnIndex = tokenIndex % 9;
+const getColumns = (board: string) =>
+  getTokens(board).reduce((acc, token, tokenIndex) => {
+    const tokenColumnIndex = tokenIndex % 9;
 
-      return acc.map((column, columnIndex) =>
-        columnIndex === tokenColumnIndex ? [...column, token] : column,
-      );
-    },
-    Array.from<string[]>({ length: 9 }).fill([]),
-  );
+    return acc.map((column, columnIndex) =>
+      columnIndex === tokenColumnIndex ? [...column, token] : column,
+    );
+  }, lineContainer);
 
 describe('Seeds constant', () => {
   test('has at least one sudoku per difficulty level', () => {
