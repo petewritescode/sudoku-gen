@@ -12,25 +12,25 @@ const getDifficulties = () => {
   return Object.keys(difficulties);
 };
 
-const getLetters = (board: string): string[] => board.split('');
+const getTokens = (board: string): string[] => board.split('');
 
 const getRows = (board: string): string[][] =>
-  getLetters(board).reduce(
+  getTokens(board).reduce(
     (acc, token, tokenIndex) => {
-      const currentRowIndex = Math.floor(tokenIndex / 9);
+      const tokenRowIndex = Math.floor(tokenIndex / 9);
 
-      return acc.map((row, rowIndex) => (rowIndex === currentRowIndex ? [...row, token] : row));
+      return acc.map((row, rowIndex) => (rowIndex === tokenRowIndex ? [...row, token] : row));
     },
     Array.from<string[]>({ length: 9 }).fill([]),
   );
 
 const getColumns = (board: string): string[][] =>
-  getLetters(board).reduce(
+  getTokens(board).reduce(
     (acc, token, tokenIndex) => {
-      const currenttokenIndex = tokenIndex % 9;
+      const tokenColumnIndex = tokenIndex % 9;
 
       return acc.map((column, columnIndex) =>
-        columnIndex === currenttokenIndex ? [...column, token] : column,
+        columnIndex === tokenColumnIndex ? [...column, token] : column,
       );
     },
     Array.from<string[]>({ length: 9 }).fill([]),
@@ -73,7 +73,7 @@ describe('Seeds constant', () => {
       });
 
       test('puzzle and solution tokens match', () => {
-        const mismatches = getLetters(puzzle).reduce<string[]>(
+        const mismatches = getTokens(puzzle).reduce<string[]>(
           (acc, letter, index) =>
             letter !== '-' && solution[index] !== letter ? [...acc, letter] : acc,
           [],
