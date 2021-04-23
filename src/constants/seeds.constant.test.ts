@@ -1,7 +1,8 @@
 import { Difficulty } from '../types/difficulty.type';
+import { GRID_SIZE } from './grid-size.constant';
 import { SEEDS } from './seeds.constant';
 
-const lineContainer = Array.from<string[]>({ length: 9 }).fill([]);
+const lineContainer = Array.from<string[]>({ length: GRID_SIZE }).fill([]);
 
 const getDifficulties = () => {
   const difficulties: Record<Difficulty, undefined> = {
@@ -18,14 +19,14 @@ const getTokens = (board: string) => board.split('');
 
 const getRows = (board: string) =>
   getTokens(board).reduce((acc, token, tokenIndex) => {
-    const tokenRowIndex = Math.floor(tokenIndex / 9);
+    const tokenRowIndex = Math.floor(tokenIndex / GRID_SIZE);
 
     return acc.map((row, rowIndex) => (rowIndex === tokenRowIndex ? [...row, token] : row));
   }, lineContainer);
 
 const getColumns = (board: string) =>
   getTokens(board).reduce((acc, token, tokenIndex) => {
-    const tokenColumnIndex = tokenIndex % 9;
+    const tokenColumnIndex = tokenIndex % GRID_SIZE;
 
     return acc.map((column, columnIndex) =>
       columnIndex === tokenColumnIndex ? [...column, token] : column,
