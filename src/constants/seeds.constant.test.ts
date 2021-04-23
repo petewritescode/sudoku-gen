@@ -62,7 +62,7 @@ describe('Seeds constant', () => {
         });
       });
 
-      test('solution solumns contain each token once', () => {
+      test('solution columns contain each token once', () => {
         getColumns(solution).forEach((column) => {
           expect(column.sort().join('')).toEqual('abcdefghi');
         });
