@@ -33,7 +33,7 @@ const getColumns = (board: string) =>
     );
   }, lineContainer);
 
-describe('Seeds constant', () => {
+describe('SEEDS constant', () => {
   test('has at least one sudoku per difficulty level', () => {
     getDifficulties().forEach((difficulty) => {
       const sudokus = SEEDS.filter((seed) => seed.difficulty === difficulty);

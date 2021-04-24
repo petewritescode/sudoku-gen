@@ -1,6 +1,6 @@
-import { Sudoku } from '../types/sudoku.type';
+import { Seed } from '../types/seed.type';
 
-export const SEEDS: Sudoku<string>[] = [
+export const SEEDS: Seed[] = [
   {
     puzzle: 'ibfcd---a--ag--c-i-gch--b-f-----g----f-ia-db--igb--f-c-h-dg-a-bg-dafb--h---ec----',
     solution: 'ibfcdehgaheagbfcdidgchiabefcdbfhgiaeefhiacdbgaigbedfhcfhedgiacbgcdafbeihbaiechgfd',
