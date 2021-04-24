@@ -1,7 +1,7 @@
 import { Difficulty } from './difficulty.type';
 
-export type Sudoku = {
-  puzzle: string;
-  solution: string;
+export type Sudoku<T> = {
+  puzzle: T;
+  solution: T;
   difficulty: Difficulty;
 };

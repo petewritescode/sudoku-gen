@@ -1,4 +1,4 @@
-import { Grid } from '../types/grid.type';
+import { Layout } from '../types/layout.type';
 
-export const rotate270 = (grid: Grid): Grid =>
-  grid[0].map((_row, index) => grid.map((row) => [...row].reverse()[index]));
+export const rotate270 = (layout: Layout): Layout =>
+  layout[0].map((_row, index) => layout.map((row) => [...row].reverse()[index]));

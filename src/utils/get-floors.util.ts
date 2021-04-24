@@ -1,7 +1,7 @@
-import { Grid } from '../types/grid.type';
+import { Layout } from '../types/layout.type';
 
-export const getFloors = (grid: Grid): number[][][] => [
-  [grid[0], grid[1], grid[2]],
-  [grid[3], grid[4], grid[5]],
-  [grid[6], grid[7], grid[8]],
+export const getFloors = (layout: Layout): number[][][] => [
+  [layout[0], layout[1], layout[2]],
+  [layout[3], layout[4], layout[5]],
+  [layout[6], layout[7], layout[8]],
 ];

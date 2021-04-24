@@ -1,8 +1,8 @@
-import { Grid } from '../types/grid.type';
+import { Layout } from '../types/layout.type';
 import { getFloors } from './get-floors.util';
 import { sortRandom } from './sort-random.util';
 
-export const shuffleRows = (grid: Grid): Grid =>
-  getFloors(grid)
+export const shuffleRows = (layout: Layout): Layout =>
+  getFloors(layout)
     .map((rows) => rows.sort(sortRandom))
     .reduce((acc, rows) => [...acc, ...rows], []);

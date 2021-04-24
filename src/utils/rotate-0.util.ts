@@ -1,3 +1,3 @@
-import { Grid } from '../types/grid.type';
+import { Layout } from '../types/layout.type';
 
-export const rotate0 = (grid: Grid): Grid => grid;
+export const rotate0 = (layout: Layout): Layout => layout;
