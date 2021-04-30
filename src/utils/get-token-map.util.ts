@@ -1,7 +1,7 @@
-import { SubstitutionMap } from '../types/substitution-map.type';
+import { TokenMap } from '../types/token-map.type';
 import { sortRandom } from './sort-random.util';
 
-export const getSubstitutionMap = (): SubstitutionMap =>
+export const getTokenMap = (): TokenMap =>
   'abcdefghi'
     .split('')
     .sort(sortRandom)

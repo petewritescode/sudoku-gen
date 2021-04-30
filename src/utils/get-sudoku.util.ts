@@ -1,20 +1,24 @@
 import { BASE_LAYOUT } from '../constants/base-layout.constant';
 import { SEEDS } from '../constants/seeds.constant';
 import { Difficulty } from '../types/difficulty.type';
-import { Game } from '../types/game.type';
-import { getBoard } from './get-board.util';
+import { Sudoku } from '../types/sudoku.type';
+import { boardToSequence } from './board-to-sequence.util';
 import { getLayout } from './get-layout.util';
 import { getSeed } from './get-seed.util';
-import { getSubstitutionMap } from './get-substitution-map.util';
+import { getTokenMap } from './get-token-map.util';
+import { populateLayout } from './populate-layout.util';
+import { replaceTokens } from './replace-tokens.util';
 
-export const getSudoku = (difficulty?: Difficulty): Game => {
+export const getSudoku = (difficulty?: Difficulty): Sudoku => {
   const seed = getSeed(SEEDS, difficulty);
   const layout = getLayout(BASE_LAYOUT);
-  const substitutionMap = getSubstitutionMap();
+  const tokenMap = getTokenMap();
 
-  const puzzle = getBoard(seed.puzzle, layout, substitutionMap);
-  const solution = getBoard(seed.solution, layout, substitutionMap);
+  // TODO There's a lot going on in these lines, wrap it up in a function?
+  const puzzle = boardToSequence(populateLayout(layout, replaceTokens(seed.puzzle, tokenMap)));
+  const solution = boardToSequence(populateLayout(layout, replaceTokens(seed.solution, tokenMap)));
 
+  // Definitely want to return a string, or would an array be better?
   return {
     puzzle,
     solution,

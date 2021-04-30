@@ -1,5 +1,5 @@
 import { Layout } from '../types/layout.type';
-import { rotate } from './rotate.util';
-import { shuffle } from './shuffle.util';
+import { rotateLayout } from './rotate-layout.util';
+import { shuffleLayout } from './shuffle-layout.util';
 
-export const getLayout = (baseLayout: Layout): Layout => shuffle(rotate(baseLayout));
+export const getLayout = (baseLayout: Layout): Layout => shuffleLayout(rotateLayout(baseLayout));

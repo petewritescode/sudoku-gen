@@ -2,6 +2,8 @@ import { Difficulty } from '../types/difficulty.type';
 import { GRID_SIZE } from './grid-size.constant';
 import { SEEDS } from './seeds.constant';
 
+// TODO Move all of these into test utils and test them
+
 const lineContainer = Array.from<string[]>({ length: GRID_SIZE }).fill([]);
 
 const getDifficulties = () => {
