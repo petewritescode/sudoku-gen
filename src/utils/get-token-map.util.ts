@@ -10,4 +10,4 @@ export const getTokenMap = (): TokenMap =>
         ...acc,
         [token]: String(index + 1),
       };
-    }, {});
+    }, {}) as TokenMap;
