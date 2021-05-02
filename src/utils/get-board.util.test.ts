@@ -1,8 +1,8 @@
 import { Board } from '../types/board.type';
 import { Layout } from '../types/layout.type';
-import { populateLayout } from './populate-layout.util';
+import { getBoard } from './get-board.util';
 
-describe('populateLayout', () => {
+describe('getBoard', () => {
   test('maps a sequence onto the relevant layout grid', () => {
     const sequence1 =
       'ibfcd---a--ag--c-i-gch--b-f-----g----f-ia-db--igb--f-c-h-dg-a-bg-dafb--h---ec----';
@@ -46,7 +46,7 @@ describe('populateLayout', () => {
       ['f', 'b', 'i', 'd', 'e', 'c', 'h', 'g', 'a'],
     ];
 
-    expect(populateLayout(layout, sequence1)).toEqual(expected1);
-    expect(populateLayout(layout, sequence2)).toEqual(expected2);
+    expect(getBoard(layout, sequence1)).toEqual(expected1);
+    expect(getBoard(layout, sequence2)).toEqual(expected2);
   });
 });
