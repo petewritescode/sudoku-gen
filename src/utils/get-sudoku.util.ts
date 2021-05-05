@@ -2,7 +2,7 @@ import { BASE_LAYOUT } from '../constants/base-layout.constant';
 import { SEEDS } from '../constants/seeds.constant';
 import { Difficulty } from '../types/difficulty.type';
 import { Sudoku } from '../types/sudoku.type';
-import { boardToSequence } from './board-to-sequence.util';
+import { boardToString } from './board-to-string.util';
 import { getBoard } from './get-board.util';
 import { getLayout } from './get-layout.util';
 import { getSeed } from './get-seed.util';
@@ -16,8 +16,8 @@ export const getSudoku = (difficulty?: Difficulty): Sudoku => {
   const tokenMap = getTokenMap();
 
   // TODO There's a lot going on in these lines, wrap it up in a function?
-  const puzzle = boardToSequence(getBoard(layout, replaceTokens(seed.puzzle, tokenMap)));
-  const solution = boardToSequence(getBoard(layout, replaceTokens(seed.solution, tokenMap)));
+  const puzzle = boardToString(getBoard(layout, replaceTokens(seed.puzzle, tokenMap)));
+  const solution = boardToString(getBoard(layout, replaceTokens(seed.solution, tokenMap)));
 
   // Definitely want to return a string, or would an array be better?
   return {
