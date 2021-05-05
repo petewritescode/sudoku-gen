@@ -1,3 +1,3 @@
-type Token = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i';
+import { Token } from './token.type';
 
 export type TokenMap = Record<Token, string>;
