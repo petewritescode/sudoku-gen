@@ -1,5 +1,5 @@
 import { GRID_SIZE } from '../constants/grid-size.constant';
-import { LINE_CONTAINER } from '../test/constants/line-container.constant';
+import { LINE_CONTAINER } from '../constants/line-container.constant';
 import { Board } from '../types/board.type';
 
 export const stringToBoard = (sequence: string): Board =>
