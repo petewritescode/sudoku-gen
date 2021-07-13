@@ -1,6 +1,6 @@
-import { rotateBoard90 } from '../test/utils/rotate-board-90.util';
-import { Difficulty } from '../types/difficulty.type';
-import { stringToBoard } from '../utils/string-to-board.util';
+import { getSequenceColumns } from '../test-utils';
+import { getSequenceRows } from '../test-utils';
+import { Difficulty } from '../types';
 import { SEEDS } from './seeds.constant';
 
 const DIFFICULTIES_MAP: Record<Difficulty, undefined> = {
@@ -33,15 +33,19 @@ describe('SEEDS constant', () => {
       });
 
       test('solution rows contain each token once', () => {
-        stringToBoard(solution).forEach((row) => {
-          expect(row.sort().join('')).toEqual('abcdefghi');
-        });
+        const result = getSequenceRows(solution).every(
+          (row) => row.split('').sort().join('') === 'abcdefghi',
+        );
+
+        expect(result).toBe(true);
       });
 
       test('solution columns contain each token once', () => {
-        rotateBoard90(stringToBoard(solution)).forEach((column) => {
-          expect(column.sort().join('')).toEqual('abcdefghi');
-        });
+        const result = getSequenceColumns(solution).every(
+          (column) => column.split('').sort().join('') === 'abcdefghi',
+        );
+
+        expect(result).toBe(true);
       });
 
       test('puzzle contains only tokens a-i and dash', () => {

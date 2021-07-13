@@ -1,25 +1,20 @@
-import { BASE_LAYOUT } from '../constants/base-layout.constant';
-import { SEEDS } from '../constants/seeds.constant';
-import { Difficulty } from '../types/difficulty.type';
-import { Sudoku } from '../types/sudoku.type';
-import { boardToString } from './board-to-string.util';
-import { getBoard } from './get-board.util';
-import { getLayout } from './get-layout.util';
-import { getSeed } from './get-seed.util';
-import { getTokenMap } from './get-token-map.util';
-import { replaceTokens } from './replace-tokens.util';
+import { BASE_LAYOUT, SEEDS } from '../constants';
+import { Difficulty, Sudoku } from '../types';
+import { getSequence } from './helper';
+import { getLayout } from './layout';
+import { getSeed } from './seed';
+import { getTokenMap } from './token';
 
-// TODO Add tests for this - essentially integration
 export const getSudoku = (difficulty?: Difficulty): Sudoku => {
+  // TODO Destructive testing if they pass an incorrect difficulty
+
   const seed = getSeed(SEEDS, difficulty);
   const layout = getLayout(BASE_LAYOUT);
   const tokenMap = getTokenMap();
 
-  // TODO There's a lot going on in these lines, wrap it up in a function?
-  const puzzle = boardToString(getBoard(layout, replaceTokens(seed.puzzle, tokenMap)));
-  const solution = boardToString(getBoard(layout, replaceTokens(seed.solution, tokenMap)));
+  const puzzle = getSequence(layout, seed.puzzle, tokenMap);
+  const solution = getSequence(layout, seed.solution, tokenMap);
 
-  // Definitely want to return a string, or would an array be better?
   return {
     puzzle,
     solution,

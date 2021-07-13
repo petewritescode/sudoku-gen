@@ -1,3 +1,3 @@
 export { getSudoku } from './utils/get-sudoku.util';
-export { boardToString } from './utils/board-to-string.util';
-export { stringToBoard } from './utils/string-to-board.util';
+export { arrayToString } from './utils/array-to-string.util';
+export { stringToArray } from './utils/string-to-array.util';
