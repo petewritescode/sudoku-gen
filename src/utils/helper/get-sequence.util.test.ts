@@ -1,4 +1,5 @@
-import { Layout, TokenMap } from '../../types';
+import { Layout } from '../../types/layout.type';
+import { TokenMap } from '../../types/token-map.type';
 import { getSequence } from './get-sequence.util';
 
 describe('getSequence', () => {

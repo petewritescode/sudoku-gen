@@ -1,4 +1,4 @@
-import { Sudoku } from '../types';
+import { Sudoku } from '../types/sudoku.type';
 
 export const SEEDS: Sudoku[] = [
   {

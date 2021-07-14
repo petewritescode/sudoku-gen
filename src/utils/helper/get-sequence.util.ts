@@ -1,5 +1,6 @@
-import { Layout, TokenMap } from '../../types';
-import { populateLayout } from '../layout';
+import { Layout } from '../../types/layout.type';
+import { TokenMap } from '../../types/token-map.type';
+import { populateLayout } from '../layout/populate-layout.util';
 import { boardToSequence } from './board-to-sequence.util';
 import { replaceTokens } from './replace-tokens.util';
 

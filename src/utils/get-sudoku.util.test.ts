@@ -1,4 +1,4 @@
-import { seedRandom } from '../test-utils';
+import { seedRandom } from '../test-utils/seed-random.util';
 import { getSudoku } from './get-sudoku.util';
 
 describe('getSudoku', () => {

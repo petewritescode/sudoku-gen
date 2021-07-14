@@ -1,4 +1,4 @@
-import { Board } from '../../types';
+import { Board } from '../../types/board.type';
 import { sequenceToBoard } from './sequence-to-board.util';
 
 describe('sequenceToBoard', () => {

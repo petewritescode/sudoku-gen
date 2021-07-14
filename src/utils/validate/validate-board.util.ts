@@ -1,4 +1,4 @@
-import { GRID_SIZE } from '../../constants';
+import { GRID_SIZE } from '../../constants/grid-size.constant';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const validateBoard = (board: any): boolean =>

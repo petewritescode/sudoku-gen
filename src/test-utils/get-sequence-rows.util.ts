@@ -1,4 +1,4 @@
-import { GRID_SIZE } from '../constants';
+import { GRID_SIZE } from '../constants/grid-size.constant';
 
 export const getSequenceRows = (sequence: string): string[] =>
   sequence.split('').reduce<string[]>((acc, token, index) => {

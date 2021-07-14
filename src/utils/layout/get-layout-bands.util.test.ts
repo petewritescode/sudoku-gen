@@ -1,4 +1,4 @@
-import { Layout } from '../../types';
+import { Layout } from '../../types/layout.type';
 import { getLayoutBands } from './get-layout-bands.util';
 
 const layout: Layout = [

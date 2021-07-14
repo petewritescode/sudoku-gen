@@ -1,5 +1,5 @@
+import { seedRandom } from '../../test-utils/seed-random.util';
 import { getRandomItem } from './get-random-item.util';
-import { seedRandom } from '../../test-utils';
 
 const items = ['a', 'b', 'c'];
 

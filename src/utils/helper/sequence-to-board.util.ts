@@ -1,5 +1,6 @@
-import { GRID_SIZE, LINE_CONTAINER } from '../../constants';
-import { Board } from '../../types';
+import { GRID_SIZE } from '../../constants/grid-size.constant';
+import { LINE_CONTAINER } from '../../constants/line-container.constant';
+import { Board } from '../../types/board.type';
 
 export const sequenceToBoard = (sequence: string): Board =>
   sequence.split('').reduce((acc, token, tokenIndex) => {

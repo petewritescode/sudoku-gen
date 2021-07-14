@@ -1,4 +1,4 @@
-import { Layout } from '../../types';
+import { Layout } from '../../types/layout.type';
 import { rotateLayout } from './rotate-layout.util';
 import { shuffleLayout } from './shuffle-layout.util';
 

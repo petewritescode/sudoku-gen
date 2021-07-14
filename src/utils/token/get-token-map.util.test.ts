@@ -1,5 +1,5 @@
-import { seedRandom } from '../../test-utils';
-import { TokenMap } from '../../types';
+import { seedRandom } from '../../test-utils/seed-random.util';
+import { TokenMap } from '../../types/token-map.type';
 import { getTokenMap } from './get-token-map.util';
 
 describe('getTokenMap', () => {

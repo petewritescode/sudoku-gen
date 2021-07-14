@@ -1,4 +1,4 @@
-import { Layout } from '../../types';
+import { Layout } from '../../types/layout.type';
 import { rotateLayout270 } from './rotate-layout-270.util';
 
 const layout: Layout = [

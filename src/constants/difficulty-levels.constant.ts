@@ -1,4 +1,4 @@
-import { Difficulty } from '../types';
+import { Difficulty } from '../types/difficulty.type';
 
 const DIFFICULTY_RECORD: Record<Difficulty, undefined> = {
   easy: undefined,

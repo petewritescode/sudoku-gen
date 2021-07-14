@@ -1,4 +1,4 @@
-import { Layout } from '../types';
+import { Layout } from '../types/layout.type';
 
 export const BASE_LAYOUT: Layout = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8],

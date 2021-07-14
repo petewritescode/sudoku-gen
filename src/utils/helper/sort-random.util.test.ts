@@ -1,4 +1,4 @@
-import { seedRandom } from '../../test-utils';
+import { seedRandom } from '../../test-utils/seed-random.util';
 import { sortRandom } from './sort-random.util';
 
 const items = ['a', 'b', 'c'];

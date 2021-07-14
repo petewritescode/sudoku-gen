@@ -1,4 +1,5 @@
-import { Board, Layout } from '../../types';
+import { Board } from '../../types/board.type';
+import { Layout } from '../../types/layout.type';
 import { populateLayout } from './populate-layout.util';
 
 describe('populateLayout', () => {

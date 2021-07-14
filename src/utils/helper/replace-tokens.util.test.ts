@@ -1,4 +1,4 @@
-import { TokenMap } from '../../types';
+import { TokenMap } from '../../types/token-map.type';
 import { replaceTokens } from './replace-tokens.util';
 
 describe('replaceTokens', () => {

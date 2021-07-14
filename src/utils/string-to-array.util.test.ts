@@ -1,4 +1,4 @@
-import { Board } from '../types';
+import { Board } from '../types/board.type';
 import { stringToArray } from './string-to-array.util';
 
 describe('stringToArray', () => {

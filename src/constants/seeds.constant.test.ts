@@ -1,20 +1,11 @@
-import { getSequenceColumns } from '../test-utils';
-import { getSequenceRows } from '../test-utils';
-import { Difficulty } from '../types';
+import { getSequenceColumns } from '../test-utils/get-sequence-columns.util';
+import { getSequenceRows } from '../test-utils/get-sequence-rows.util';
+import { DIFFICULTY_LEVELS } from './difficulty-levels.constant';
 import { SEEDS } from './seeds.constant';
-
-const DIFFICULTIES_MAP: Record<Difficulty, undefined> = {
-  easy: undefined,
-  medium: undefined,
-  hard: undefined,
-  expert: undefined,
-};
-
-const DIFFICULTIES = Object.keys(DIFFICULTIES_MAP);
 
 describe('SEEDS constant', () => {
   test('has at least one sudoku per difficulty level', () => {
-    DIFFICULTIES.forEach((difficulty) => {
+    DIFFICULTY_LEVELS.forEach((difficulty) => {
       const sudokus = SEEDS.filter((seed) => seed.difficulty === difficulty);
 
       expect(sudokus.length).toBeGreaterThanOrEqual(1);

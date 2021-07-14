@@ -1,6 +1,6 @@
-import { Board } from '../types';
-import { sequenceToBoard } from './helper';
-import { validateSequence } from './validate';
+import { Board } from '../types/board.type';
+import { sequenceToBoard } from './helper/sequence-to-board.util';
+import { validateSequence } from './validate/validate-sequence.util';
 
 export const stringToArray = (boardString: string): Board => {
   if (!validateSequence(boardString)) {

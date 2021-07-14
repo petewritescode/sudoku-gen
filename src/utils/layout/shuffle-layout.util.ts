@@ -1,4 +1,4 @@
-import { Layout } from '../../types';
+import { Layout } from '../../types/layout.type';
 import { shuffleLayoutBands } from './shuffle-layout-bands.util';
 import { shuffleLayoutColumns } from './shuffle-layout-columns.util';
 import { shuffleLayoutRows } from './shuffle-layout-rows.util';

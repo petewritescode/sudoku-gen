@@ -1,4 +1,4 @@
-import { Layout } from '../../types';
+import { Layout } from '../../types/layout.type';
 
 export const getLayoutBands = (layout: Layout): number[][][] => [
   [layout[0], layout[1], layout[2]],

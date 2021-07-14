@@ -1,5 +1,5 @@
-import { seedRandom } from '../../test-utils';
-import { Sudoku } from '../../types';
+import { seedRandom } from '../../test-utils/seed-random.util';
+import { Sudoku } from '../../types/sudoku.type';
 import { getSeed } from './get-seed.util';
 
 const seeds: Sudoku[] = [
