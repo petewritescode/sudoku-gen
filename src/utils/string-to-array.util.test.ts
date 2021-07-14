@@ -2,6 +2,12 @@ import { Board } from '../types';
 import { stringToArray } from './string-to-array.util';
 
 describe('stringToArray', () => {
+  test('throws an error if passed an invalid sequence string', () => {
+    const sequence = 'abc';
+
+    expect(() => stringToArray(sequence)).toThrow();
+  });
+
   test('converts a sequence string to a board grid', () => {
     const sequence =
       '12-45-78---67891-37-9-23-562345-7--1567---234-9-23456-3-5--8912-7891--4591-3456--';
@@ -19,11 +25,5 @@ describe('stringToArray', () => {
     ];
 
     expect(stringToArray(sequence)).toEqual(expected);
-  });
-
-  test('throws an error if passed an invalid sequence string', () => {
-    const sequence = 'abc';
-
-    expect(() => stringToArray(sequence)).toThrow();
   });
 });

@@ -2,6 +2,12 @@ import { Board } from '../types';
 import { arrayToString } from './array-to-string.util';
 
 describe('arrayToString', () => {
+  test('throws an error if given an invalid grid', () => {
+    const board = [['1', '2', '-', '4', '5', '-', '7', '8', '-']] as any;
+
+    expect(() => arrayToString(board)).toThrow();
+  });
+
   test('converts a board grid to a sequence string', () => {
     const board: Board = [
       ['1', '2', '-', '4', '5', '-', '7', '8', '-'],
@@ -19,11 +25,5 @@ describe('arrayToString', () => {
       '12-45-78---67891-37-9-23-562345-7--1567---234-9-23456-3-5--8912-7891--4591-3456--';
 
     expect(arrayToString(board)).toEqual(expected);
-  });
-
-  test('throws an error if given an invalid grid', () => {
-    const board = [['1', '2', '-', '4', '5', '-', '7', '8', '-']] as any;
-
-    expect(() => arrayToString(board)).toThrow();
   });
 });

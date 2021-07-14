@@ -1,10 +1,11 @@
 import { Board } from '../types';
-import { isValidSequence, sequenceToBoard } from './helper';
+import { sequenceToBoard } from './helper';
+import { validateSequence } from './validate';
 
 export const stringToArray = (boardString: string): Board => {
-  if (!isValidSequence(boardString)) {
+  if (!validateSequence(boardString)) {
     throw new Error(
-      'Invalid string, expected 81 character string containing numbers 1-9 and dashes',
+      'Invalid board string, expected 81 character string containing numbers 1-9 and dashes',
     );
   }
 

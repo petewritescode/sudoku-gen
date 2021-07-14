@@ -1,7 +1,7 @@
 import { GRID_SIZE } from '../../constants';
-import { Board } from '../../types';
 
-export const isValidBoard = (board: Board): boolean =>
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const validateBoard = (board: any): boolean =>
   Array.isArray(board) &&
   board.length === GRID_SIZE &&
   board.every(
