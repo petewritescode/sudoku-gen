@@ -1,5 +1,5 @@
-import { Layout } from '../../types/layout.type';
 import { getRandomItem } from '../helper/get-random-item.util';
+import { Layout } from '../../types/layout.type';
 import { rotateLayout0 } from './rotate-layout-0.util';
 import { rotateLayout180 } from './rotate-layout-180.util';
 import { rotateLayout270 } from './rotate-layout-270.util';

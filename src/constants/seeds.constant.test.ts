@@ -1,6 +1,6 @@
+import { DIFFICULTY_LEVELS } from './difficulty-levels.constant';
 import { getSequenceColumns } from '../test-utils/get-sequence-columns.util';
 import { getSequenceRows } from '../test-utils/get-sequence-rows.util';
-import { DIFFICULTY_LEVELS } from './difficulty-levels.constant';
 import { SEEDS } from './seeds.constant';
 
 describe('SEEDS constant', () => {

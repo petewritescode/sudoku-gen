@@ -1,6 +1,6 @@
+import { getSequence } from './get-sequence.util';
 import { Layout } from '../../types/layout.type';
 import { TokenMap } from '../../types/token-map.type';
-import { getSequence } from './get-sequence.util';
 
 describe('getSequence', () => {
   test('returns a board sequence generated from the passed layout, input sequence and token map', () => {

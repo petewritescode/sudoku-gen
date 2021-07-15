@@ -1,5 +1,5 @@
-import { Board } from '../types/board.type';
 import { arrayToString } from './array-to-string.util';
+import { Board } from '../types/board.type';
 
 describe('arrayToString', () => {
   test('throws an error if given an invalid grid', () => {

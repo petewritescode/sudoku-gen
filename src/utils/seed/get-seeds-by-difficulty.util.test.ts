@@ -1,5 +1,5 @@
-import { Sudoku } from '../../types/sudoku.type';
 import { getSeedsByDifficulty } from './get-seeds-by-difficulty.util';
+import { Sudoku } from '../../types/sudoku.type';
 
 const seeds: Sudoku[] = [
   { puzzle: 'aaa', solution: 'aaa', difficulty: 'easy' },

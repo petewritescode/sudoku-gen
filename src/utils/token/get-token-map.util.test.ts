@@ -1,6 +1,6 @@
+import { getTokenMap } from './get-token-map.util';
 import { seedRandom } from '../../test-utils/seed-random.util';
 import { TokenMap } from '../../types/token-map.type';
-import { getTokenMap } from './get-token-map.util';
 
 describe('getTokenMap', () => {
   test('returns an object mapping tokens to random numbers 1-9', () => {

@@ -1,5 +1,5 @@
-import { TokenMap } from '../../types/token-map.type';
 import { sortRandom } from '../helper/sort-random.util';
+import { TokenMap } from '../../types/token-map.type';
 
 export const getTokenMap = (): TokenMap =>
   'abcdefghi'

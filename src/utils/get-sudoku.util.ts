@@ -1,12 +1,12 @@
 import { BASE_LAYOUT } from '../constants/base-layout.constant';
-import { DIFFICULTY_LEVELS } from '../constants/difficulty-levels.constant';
-import { SEEDS } from '../constants/seeds.constant';
 import { Difficulty } from '../types/difficulty.type';
-import { Sudoku } from '../types/sudoku.type';
-import { getSequence } from './helper/get-sequence.util';
+import { DIFFICULTY_LEVELS } from '../constants/difficulty-levels.constant';
 import { getLayout } from './layout/get-layout.util';
 import { getSeed } from './seed/get-seed.util';
+import { getSequence } from './helper/get-sequence.util';
 import { getTokenMap } from './token/get-token-map.util';
+import { SEEDS } from '../constants/seeds.constant';
+import { Sudoku } from '../types/sudoku.type';
 import { validateDifficulty } from './validate/validate-difficulty.util';
 
 export const getSudoku = (difficulty?: Difficulty): Sudoku => {

@@ -1,5 +1,5 @@
-import { TokenMap } from '../../types/token-map.type';
 import { Token } from '../../types/token.type';
+import { TokenMap } from '../../types/token-map.type';
 
 export const replaceTokens = (sequence: string, tokenMap: TokenMap): string =>
   sequence

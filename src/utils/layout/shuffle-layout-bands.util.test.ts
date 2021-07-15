@@ -1,5 +1,5 @@
-import { seedRandom } from '../../test-utils/seed-random.util';
 import { Layout } from '../../types/layout.type';
+import { seedRandom } from '../../test-utils/seed-random.util';
 import { shuffleLayoutBands } from './shuffle-layout-bands.util';
 
 const layout: Layout = [

@@ -1,5 +1,5 @@
-import { seedRandom } from '../test-utils/seed-random.util';
 import { getSudoku } from './get-sudoku.util';
+import { seedRandom } from '../test-utils/seed-random.util';
 
 describe('getSudoku', () => {
   test('throws an error if given an invalid difficulty', () => {

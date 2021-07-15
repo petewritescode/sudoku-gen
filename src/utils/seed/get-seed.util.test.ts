@@ -1,6 +1,6 @@
+import { getSeed } from './get-seed.util';
 import { seedRandom } from '../../test-utils/seed-random.util';
 import { Sudoku } from '../../types/sudoku.type';
-import { getSeed } from './get-seed.util';
 
 const seeds: Sudoku[] = [
   { puzzle: 'aaa', solution: 'aaa', difficulty: 'easy' },

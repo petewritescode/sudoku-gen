@@ -1,6 +1,6 @@
-import { seedRandom } from '../../test-utils/seed-random.util';
-import { Layout } from '../../types/layout.type';
 import { getLayout } from './get-layout.util';
+import { Layout } from '../../types/layout.type';
+import { seedRandom } from '../../test-utils/seed-random.util';
 
 const layout: Layout = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8],
