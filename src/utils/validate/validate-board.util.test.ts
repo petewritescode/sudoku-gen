@@ -1,8 +1,9 @@
+import { Board } from '../../types/board.type';
 import { validateBoard } from './validate-board.util';
 
 describe('validateBoard', () => {
   test('returns true for a 9x9 array of tokens 1-9 and dash', () => {
-    const board = [
+    const board: Board = [
       ['1', '2', '-', '4', '5', '-', '7', '8', '-'],
       ['-', '-', '6', '7', '8', '9', '1', '-', '3'],
       ['7', '-', '9', '-', '2', '3', '-', '5', '6'],
@@ -18,7 +19,7 @@ describe('validateBoard', () => {
   });
 
   test('returns false if the board contains invalid tokens', () => {
-    const board = [
+    const board: Board = [
       ['a', '2', '-', '4', '5', '-', '7', '8', '-'],
       ['-', '-', '6', '7', '8', '9', '1', '-', '3'],
       ['7', '-', '9', '-', '2', '3', '-', '5', '6'],
@@ -34,7 +35,7 @@ describe('validateBoard', () => {
   });
 
   test('returns false for a non-9x9 array', () => {
-    const board = [
+    const board: Board = [
       ['1', '2', '-', '4', '5', '-', '7', '8'],
       ['-', '-', '6', '7', '8', '9', '1', '-'],
       ['7', '-', '9', '-', '2', '3', '-', '5'],
