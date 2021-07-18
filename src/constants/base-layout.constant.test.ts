@@ -7,7 +7,7 @@ describe('BASE_LAYOUT constant', () => {
   });
 
   test('contains the numbers 0 to 80 in order', () => {
-    const numbers = BASE_LAYOUT.reduce<number[]>((acc, row) => [...acc, ...row], []);
+    const numbers = BASE_LAYOUT.flat();
     expect(numbers.every((number, index) => number == index));
   });
 });

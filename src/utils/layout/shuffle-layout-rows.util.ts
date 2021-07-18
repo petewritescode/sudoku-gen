@@ -5,4 +5,4 @@ import { sortRandom } from '../helper/sort-random.util';
 export const shuffleLayoutRows = (layout: Layout): Layout =>
   getLayoutBands(layout)
     .map((rows) => rows.sort(sortRandom))
-    .reduce((acc, rows) => [...acc, ...rows], []);
+    .flat();
