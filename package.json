@@ -11,6 +11,7 @@
     "build": "rimraf dist && tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "eslint ./src --ext .js,.ts",
+    "prepare": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
