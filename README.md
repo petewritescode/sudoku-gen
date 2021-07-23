@@ -1,3 +1,3 @@
-# sudoku-maker
+# sudoku-gen
 
 Sudoku puzzle generator
