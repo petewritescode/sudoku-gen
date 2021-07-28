@@ -1,6 +1,6 @@
 # SudokuGen
 
-**A fast sudoku puzzle generator.**
+A fast sudoku puzzle generator.
 
 ## Installation
 
@@ -44,15 +44,19 @@ const sudoku = getSudoku();
 
 Most sudoku generators start with a completed sudoku grid and remove numbers one at a time, using a backtracking algorithm to stop once the puzzle becomes unsolvable. This process is too slow to be performed in real-time, so usually requires a background task and database for generating and storing puzzles as they're created.
 
-SudokuGen works differently. It starts with a known, solvable puzzle ("seed") and performs various transformations to turn it into a brand new puzzle. This makes it extremely fast, with no requirement for a back end, whilst maintaining quality.
+SudokuGen works differently. It starts with a known, solvable "seed" puzzle and performs various transformations to turn it into a brand new puzzle. This makes it extremely fast, with no requirement for a back end, whilst maintaining quality.
 
-The following transformations are used, giving over 2.4 trillion unique puzzles for each and every seed puzzle. To put that in context, if you played sudoku 24/7 and took 3 minutes to solve each puzzle, it would take until your 13,915,534th birthday to exhaust a single seed :birthday:.
+Each seed gives over 2.4 trillion unique puzzles. To put that in context, if you played sudoku 24/7 and took 3 minutes to solve each puzzle, it would take until your 13,915,534th birthday to exhaust a single seed :birthday:.
+
+### Transformations
+
+The following transformations are used ("!" = [factorial](https://en.wikipedia.org/wiki/Factorial)):
 
 * **Rotate board** - 4 permutations (0&deg;, 90&deg;, 180&deg;, 270&deg;).
-* **Shuffle column groups ("stacks")** - 6 permutations (3 factorial).
-* **Shuffle row groups ("bands")** - 6 permutations (3 factorial).
-* **Shuffle columns** - 216 permutations (6 * 6 * 6).
-* **Shuffle rows** - 216 permutations (6 * 6 * 6).
-* **Swap numbers** - 362,880 permutations (9 factorial).
+* **Shuffle column groups ("stacks")** - 6 permutations (3!).
+* **Shuffle row groups ("bands")** - 6 permutations (3!).
+* **Shuffle columns** - 216 permutations (3! x 3! x 3!).
+* **Shuffle rows** - 216 permutations (3! x 3! x 3!).
+* **Swap numbers** - 362,880 permutations (9!).
 
-**Total permutations per seed** = 4 * 6 * 6 * 216 * 216 * 362,880 = 2,437,996,216,320.
+**Total permutations per seed** = 4 x 6 x 6 x 216 x 216 x 362,880 = 2,437,996,216,320.
