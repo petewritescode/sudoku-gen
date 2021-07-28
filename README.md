@@ -46,7 +46,7 @@ Most sudoku generators start with a completed sudoku grid and remove numbers one
 
 SudokuGen works differently. It starts with a known, solvable "seed" puzzle and performs various transformations to turn it into a brand new puzzle. This makes it extremely fast, with no requirement for a back end, whilst maintaining quality.
 
-Each seed gives over 2.4 trillion unique puzzles. To put that in context, if you played sudoku 24/7 and took 3 minutes to solve each puzzle, it would take until your 13,915,534th birthday :birthday: to exhaust a single seed.
+Each seed gives over 2.4 trillion unique puzzles. To put that in context, if you played sudoku 24/7 and took 3 minutes to solve each puzzle, it would take until your 13,915,534th birthday to exhaust a single seed :birthday:
 
 ### Transformations
 
