@@ -1,6 +1,6 @@
 {
   "name": "sudoku-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sudoku puzzle generator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,7 +25,7 @@
     "typescript"
   ],
   "author": "Pete Williams <hello@petewritescode.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/petewritescode/sudoku-gen/issues"
   },
