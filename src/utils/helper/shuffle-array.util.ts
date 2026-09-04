@@ -1,3 +1,4 @@
+// Fisher-Yates (Knuth) shuffle
 export const shuffleArray = <T>(items: T[]): T[] => {
   const result = [...items];
 

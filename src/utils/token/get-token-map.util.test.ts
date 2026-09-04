@@ -5,39 +5,39 @@ import { TokenMap } from '../../types/token-map.type';
 describe('getTokenMap', () => {
   test('returns an object mapping tokens to random numbers 1-9', () => {
     const expected1: TokenMap = {
+      a: '3',
+      b: '8',
+      c: '5',
+      d: '7',
       e: '1',
       f: '2',
-      a: '3',
-      i: '4',
-      c: '5',
-      h: '6',
-      d: '7',
-      b: '8',
       g: '9',
+      h: '6',
+      i: '4',
     };
 
     const expected2: TokenMap = {
-      g: '1',
-      f: '2',
-      d: '3',
+      a: '7',
       b: '4',
       c: '5',
-      h: '6',
-      a: '7',
+      d: '3',
       e: '8',
+      f: '2',
+      g: '1',
+      h: '6',
       i: '9',
     };
 
     const expected3: TokenMap = {
-      e: '1',
-      h: '2',
       a: '3',
-      g: '4',
-      f: '5',
-      d: '6',
-      i: '7',
       b: '8',
       c: '9',
+      d: '6',
+      e: '1',
+      f: '5',
+      g: '4',
+      h: '2',
+      i: '7',
     };
 
     seedRandom('lorem');
