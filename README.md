@@ -1,4 +1,4 @@
-# SudokuGen
+# SudokuGen - pipeline test
 
 A fast sudoku puzzle generator.
 
